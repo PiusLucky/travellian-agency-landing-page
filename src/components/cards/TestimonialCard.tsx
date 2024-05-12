@@ -21,7 +21,7 @@ function TestimonialCard({ imageUrl, review, name, position }: IProps) {
         <p>{position}</p>
       </div>
 
-      <div className="absolute left-[40px] -top-8">
+      <div className="hidden md:block absolute left-[40px] -top-8">
         <Avatar className="w-[60px] h-[60px]">
           <AvatarImage src={imageUrl} alt="reviewer avatar" />
           <AvatarFallback>CN</AvatarFallback>

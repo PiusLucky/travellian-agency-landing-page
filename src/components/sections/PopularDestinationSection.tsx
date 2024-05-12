@@ -9,22 +9,22 @@ function PopularDestinationSection() {
     {
       title: "Monument of Berlin",
       location: "Berlin, Germany",
-      imageUrl: "/images/dg_1.jpg",
+      imageUrl: "/images/pd_1.jpg",
     },
     {
       title: "Millennium Bridge",
       location: "London, United Kingdom",
-      imageUrl: "/images/dg_2.jpg",
+      imageUrl: "/images/pd_2.jpg",
     },
     {
       title: "Rialto Bridge",
       location: "Venice, Italy",
-      imageUrl: "/images/dg_3.jpg",
+      imageUrl: "/images/pd_3.jpg",
     },
     {
       title: "Millennium Bridge",
       location: "London, United Kingdom",
-      imageUrl: "/images/dg_2.jpg",
+      imageUrl: "/images/pd_2.jpg",
     },
   ];
   return (

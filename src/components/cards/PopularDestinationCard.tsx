@@ -11,7 +11,10 @@ interface IProps {
 function PopularDestinationCard({ title, location, imageUrl }: IProps) {
   return (
     <div className="relative ">
-      <img src={imageUrl} className="h-[500px] rounded-[26px] object-cover" />
+      <img
+        src={imageUrl}
+        className="h-[500px] rounded-[26px] object-cover w-full"
+      />
       <div className="absolute bottom-8 left-4">
         <p
           className={cn(
