@@ -1,7 +1,7 @@
 # Travellian
 Travellian website built with Next14, Shadcn, Framer motion and Tailwind.
 
-![Travellian-t1](https://github.com/PiusLucky/travellian-agency-landing-page/assets/32282934/9e71a23a-ee3a-413b-91b0-e07d7a9dab05)
+![Travellian-t1](https://github.com/PiusLucky/travellian-agency-landing-page/assets/32282934/9c93c6e1-aa13-4b83-bfd5-2d57a74a9cc3)
 
 
 # Youtube
@@ -35,8 +35,8 @@ npm install && npm run dev
 
 
 ## Credits/Shout out
-All thanks to spaceberrry from the figma community
-https://www.figma.com/@spaceberrry
+All thanks to Al Razi Siam from the figma community
+https://www.figma.com/@alrazisiam
 
 
 ## Author
