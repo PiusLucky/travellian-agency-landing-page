@@ -1,5 +1,6 @@
 import { cn, playFair } from "@/lib/utils";
-import React from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface IProps {
   imageUrl: string;
@@ -16,16 +17,23 @@ function TripPlannerCard({
   amount,
   duration,
 }: IProps) {
+  const [hover, setHover] = useState(false);
   return (
     <div>
       <div>
-        <img
+        <motion.img
           src={imageUrl}
+          onHoverStart={() => setHover(true)}
+          onHoverEnd={() => setHover(false)}
+          animate={hover ? { y: -50 } : { y: 0 }}
           alt="city"
           className="h-[399px] w-full object-cover rounded-[26px]"
         />
       </div>
-      <div className="mt-[20px]">
+      <motion.div
+        animate={hover ? { opacity: 1, y: -30 } : { opacity: 0, y: 0 }}
+        className="mt-[20px]"
+      >
         <div className="flex justify-between text-[#172432]">
           <p className="uppercase text-[18px]">{title}</p>
           <p>€{amount}/Day</p>
@@ -44,7 +52,7 @@ function TripPlannerCard({
           </div>
           <p className="text-[18px]">{duration}</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../common/Header";
 import SpecialOfferCard from "../cards/SpecialOfferCard";
+import { motion } from "framer-motion";
+import customVariants from "@/lib/animation";
 
 function SpecialOfferSection() {
   const data = [
@@ -52,11 +54,19 @@ function SpecialOfferSection() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between flex-col lg:flex-row gap-4 mt-16 md:mt-[100px]">
+      <motion.div
+        variants={customVariants.cardWrapper}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        className="flex justify-between flex-col lg:flex-row gap-4 mt-16 md:mt-[100px]"
+      >
         {data.map((item, index) => (
-          <SpecialOfferCard {...item} key={index} />
+          <motion.div key={index} variants={customVariants.cardItem}>
+            <SpecialOfferCard {...item} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

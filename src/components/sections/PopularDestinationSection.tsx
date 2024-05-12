@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../common/Header";
 import PopularDestinationCard from "../cards/PopularDestinationCard";
+import { motion } from "framer-motion";
+import customVariants from "@/lib/animation";
 
 function PopularDestinationSection() {
   const data = [
@@ -53,11 +55,19 @@ function PopularDestinationSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 mt-16 md:mt-[100px]">
+      <motion.div
+        variants={customVariants.cardWrapper}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 mt-16 md:mt-[100px]"
+      >
         {data.map((item, index) => (
-          <PopularDestinationCard {...item} key={index} />
+          <motion.div key={index} variants={customVariants.cardItem}>
+            <PopularDestinationCard {...item} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -35,7 +35,7 @@ function TripPlannerSection() {
     },
   ];
   return (
-    <section>
+    <section className="flex flex-col md:flex-row justify-between items-center">
       <div>
         <Header
           title="Trip Planners"
